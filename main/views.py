@@ -16,13 +16,11 @@ def contact(request):
         name = request.POST['name']
         email = request.POST["email"]
         message = request.POST["message"]
-        number = request.POST["number"]
 
         contact_object = Contact.objects.create(
             name=name,
             email=email,
-            subject=message,
-            number=number
+            subject=message
         )
         contact_object.save()
 
